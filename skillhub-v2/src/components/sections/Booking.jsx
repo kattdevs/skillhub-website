@@ -30,7 +30,7 @@ export default function Booking() {
   return (
     <section id="booking" className="sec" style={{ background: '#fff' }}>
       <div className="wrap">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,320px),1fr))', gap: '4rem', alignItems: 'start' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem', alignItems: 'start' }}>
           <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <div className="s-label"><span>BOOK A CALL</span></div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(2rem,4vw,3rem)', letterSpacing: '-0.04em', color: '#0a0a0a', lineHeight: 1.05, textTransform: 'uppercase', marginBottom: '1.5rem' }}>
@@ -62,11 +62,11 @@ export default function Booking() {
               </div>
             ) : (
               <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12 }}>
                   <div><label style={lbl}>Full Name *</label><input name="name" value={form.name} onChange={set} required placeholder="Jane Smith" style={inp} /></div>
                   <div><label style={lbl}>Email *</label><input type="email" name="email" value={form.email} onChange={set} required placeholder="jane@company.com" style={inp} /></div>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12 }}>
                   <div><label style={lbl}>Phone</label><input name="phone" value={form.phone} onChange={set} placeholder="+27 XX XXX XXXX" style={inp} /></div>
                   <div><label style={lbl}>Organisation</label><input name="company" value={form.company} onChange={set} placeholder="Your Company" style={inp} /></div>
                 </div>
@@ -76,7 +76,7 @@ export default function Booking() {
                     {svcs.map(s => <option key={s} value={s}>{s}</option>)}
                   </select>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12 }}>
                   <div><label style={lbl}>Date *</label><input type="date" name="date" value={form.date} onChange={set} min={today} required style={inp} /></div>
                   <div><label style={lbl}>Time *</label>
                     <select name="time" value={form.time} onChange={set} required style={inp}>

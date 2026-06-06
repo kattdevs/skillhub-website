@@ -13,7 +13,7 @@ function ProjectsHero() {
       <div className="wrap">
         <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }}>
           <div className="s-label-dark"><span>OUR WORK</span></div>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(3.5rem,10vw,8rem)', letterSpacing: '-0.04em', lineHeight: .92, color: '#fff', textTransform: 'uppercase', marginBottom: '2rem' }}>
+          <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(2.5rem,9vw,8rem)', letterSpacing: '-0.04em', lineHeight: .92, color: '#fff', textTransform: 'uppercase', marginBottom: '2rem' }}>
             PROJECTS &<br />PORTFOLIO
           </h1>
           <p style={{ fontSize: 18, color: '#555', maxWidth: 520, lineHeight: 1.75 }}>

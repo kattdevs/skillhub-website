@@ -16,7 +16,7 @@ function ServicesHero() {
       <div className="wrap">
         <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }}>
           <div className="s-label"><span>WHAT WE DO</span></div>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(3.5rem,10vw,8rem)', letterSpacing: '-0.04em', lineHeight: .92, color: '#0a0a0a', textTransform: 'uppercase', marginBottom: '2rem' }}>
+          <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(2.5rem,9vw,8rem)', letterSpacing: '-0.04em', lineHeight: .92, color: '#0a0a0a', textTransform: 'uppercase', marginBottom: '2rem' }}>
             OUR<br />SERVICES
           </h1>
           <p style={{ fontSize: 18, color: '#666', maxWidth: 560, lineHeight: 1.75 }}>

@@ -14,7 +14,7 @@ export default function FullServiceStatement() {
           <div style={{ width: 20, height: 1, background: '#888' }} />
           <span style={{ fontSize: 11, letterSpacing: '0.18em', color: '#888', textTransform: 'uppercase', fontWeight: 500 }}>Full Service</span>
         </div>
-        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(2.8rem,7vw,6.5rem)', letterSpacing: '-0.04em', lineHeight: 1.0, textTransform: 'uppercase' }}>
+        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(1.9rem,6.5vw,6.5rem)', letterSpacing: '-0.04em', lineHeight: 1.0, textTransform: 'uppercase' }}>
           <motion.span style={{ color: color1, display: 'block' }}>
             A FULL-SERVICE<br />DIGITAL PARTNER,<br />SKILLHUB COMBINES
           </motion.span>

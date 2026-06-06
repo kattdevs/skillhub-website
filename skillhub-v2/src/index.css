@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* ── FONTS & TOKENS ── */
+/* ── FONTS & TOKENS ───────────────────────────────────── */
 :root {
   --font-display: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
@@ -9,8 +9,6 @@
   --text: #0a0a0a;
   --muted: #888;
   --border: rgba(0,0,0,0.1);
-  --accent: #0a0a0a;
-  /* page transition */
   --pt-duration: 0.35s;
 }
 
@@ -30,16 +28,16 @@ body {
 ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
 ::selection { background: #0a0a0a; color: #fff; }
 
-/* ── LAYOUT ── */
+/* ── LAYOUT ──────────────────────────────────────────── */
 .wrap {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 clamp(1.5rem, 5vw, 4rem);
+  padding: 0 clamp(1.25rem, 5vw, 4rem);
 }
-.sec { padding: 7rem 0; }
+.sec { padding: clamp(4rem, 8vw, 7rem) 0; }
 
-/* ── BUTTONS ── */
+/* ── BUTTONS ─────────────────────────────────────────── */
 .btn-dark {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   background: #0a0a0a; color: #fff;
@@ -68,7 +66,7 @@ body {
 }
 .btn-white:hover { background: #f0f0f0; transform: translateY(-1px); }
 
-/* ── CARD STYLES ── */
+/* ── CARDS ───────────────────────────────────────────── */
 .card-light {
   background: #fff;
   border: 1px solid rgba(0,0,0,0.06);
@@ -90,45 +88,7 @@ body {
   transform: translateY(-4px);
 }
 
-/* ── SERVICE CARD (reference-inspired, SkillHub palette) ── */
-.svc-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  min-height: 420px;
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  cursor: pointer;
-  text-decoration: none;
-}
-.svc-card-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  transition: transform .6s cubic-bezier(0.16,1,0.3,1);
-}
-.svc-card:hover .svc-card-bg { transform: scale(1.04); }
-
-/* wave decoration — adapted from reference, using site dark tones */
-.svc-card-wave {
-  position: absolute;
-  z-index: 1;
-  opacity: 0.12;
-  pointer-events: none;
-  transition: opacity .4s;
-}
-.svc-card:hover .svc-card-wave { opacity: 0.22; }
-
-.svc-card-content {
-  position: relative;
-  z-index: 2;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  gap: 1rem;
-}
+/* ── SERVICE CARD CTA ────────────────────────────────── */
 .svc-card-cta {
   margin-top: auto;
   width: 100%;
@@ -149,12 +109,8 @@ body {
   transition: background .25s, border-color .25s;
   backdrop-filter: blur(8px);
 }
-.svc-card:hover .svc-card-cta {
-  background: rgba(255,255,255,0.22);
-  border-color: rgba(255,255,255,0.4);
-}
 
-/* ── SECTION LABELS ── */
+/* ── SECTION LABELS ──────────────────────────────────── */
 .s-label {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.18em;
@@ -169,7 +125,7 @@ body {
 }
 .s-label-dark::before { content:''; width:20px; height:1px; background:#555; }
 
-/* ── INPUTS ── */
+/* ── INPUTS ──────────────────────────────────────────── */
 input, textarea, select {
   background: #fff; border: 1px solid rgba(0,0,0,0.15);
   color: #0a0a0a; outline: none; font-family: var(--font-body);
@@ -179,23 +135,14 @@ input:focus, textarea:focus, select:focus { border-color: #0a0a0a; }
 input::placeholder, textarea::placeholder { color: #aaa; }
 select option { background: #fff; }
 
-/* ── GRIDS ── */
-.grid-2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:1.5rem; }
-.grid-3 { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); gap:1.25rem; }
-.grid-4 { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr)); gap:1rem; }
-.grid-5 { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr)); gap:0.75rem; }
-
-/* ── ANIMATIONS ── */
+/* ── ANIMATIONS ──────────────────────────────────────── */
 @keyframes blob { 0%,100%{transform:translateY(10px)} 50%{transform:translateX(-10px)} }
 .animate-blob { animation:blob 2s ease-in-out infinite; }
-.animation-delay-1000 { animation-delay:-1s; }
 
 @keyframes spin { to{transform:rotate(360deg)} }
 .spin { animation:spin 1s linear infinite; }
 
-@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
-
-/* ── TICKER ── */
+/* ── TICKER ──────────────────────────────────────────── */
 @keyframes ticker {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -203,7 +150,7 @@ select option { background: #fff; }
 .ticker-inner { animation: ticker 20s linear infinite; }
 .ticker-inner:hover { animation-play-state: paused; }
 
-/* ── NAV PILL ── */
+/* ── NAV PILL ─────────────────────────────────────────── */
 .nav-pill {
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(20px);
@@ -211,23 +158,23 @@ select option { background: #fff; }
   box-shadow: 0 4px 24px rgba(0,0,0,0.06);
 }
 
-/* ── PAGE TRANSITIONS ── */
+/* ── PAGE TRANSITION ─────────────────────────────────── */
 .page-enter { animation: pageEnter var(--pt-duration) cubic-bezier(0.16,1,0.3,1) both; }
 @keyframes pageEnter {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── MOBILE NAV ── */
-@media(max-width:768px){
-  .d-nav, .d-cta { display:none!important; }
-  .m-toggle { display:flex!important; }
-  .about-grid { grid-template-columns:1fr!important; }
-  .feature-grid { grid-template-columns:1fr!important; }
-  .feature-sticky { position:static!important; }
-  .contact-span { grid-column:span 1!important; }
+/* ── FEATURE SECTION RESPONSIVE ─────────────────────── */
+@media (max-width: 768px) {
+  .feature-sticky { position: static !important; }
+  .feature-grid   { grid-template-columns: 1fr !important; }
+  .d-nav          { display: none !important; }
+  .d-cta          { display: none !important; }
+  .m-toggle       { display: flex !important; }
 }
-@media(min-width:769px){
-  .m-toggle { display:none!important; }
-  .d-nav, .d-cta { display:flex!important; }
+@media (min-width: 769px) {
+  .m-toggle { display: none !important; }
+  .d-nav    { display: flex !important; }
+  .d-cta    { display: flex !important; }
 }

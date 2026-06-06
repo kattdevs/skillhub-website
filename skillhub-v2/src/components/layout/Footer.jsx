@@ -8,7 +8,7 @@ export default function Footer() {
       {/* Big CTA */}
       <div className="wrap" style={{ padding: '8rem clamp(1.5rem,5vw,4rem) 6rem' }}>
         <motion.div initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(3rem,10vw,8rem)', letterSpacing: '-0.04em', lineHeight: .95, color: '#fff', textTransform: 'lowercase', marginBottom: '2.5rem' }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(2.2rem,10vw,8rem)', letterSpacing: '-0.04em', lineHeight: .95, color: '#fff', textTransform: 'lowercase', marginBottom: '2.5rem' }}>
             Let's build<br />your digital<br />future.
           </h2>
           <Link to="/contact" className="btn-white" style={{ padding: '14px 32px', borderRadius: 999, fontSize: 13, letterSpacing: '0.08em' }}>

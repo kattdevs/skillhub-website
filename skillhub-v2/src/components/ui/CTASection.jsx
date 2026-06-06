@@ -24,7 +24,7 @@ export default function CTASection({
           viewport={{ once: true }}
           style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '2rem' }}
         >
-          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(2.5rem,7vw,6rem)', letterSpacing: '-0.04em', color: textCol, lineHeight: .95, whiteSpace: 'pre-line' }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(2rem,7vw,6rem)', letterSpacing: '-0.04em', color: textCol, lineHeight: .95, whiteSpace: 'pre-line' }}>
             {title}
           </h2>
           {subtitle && (

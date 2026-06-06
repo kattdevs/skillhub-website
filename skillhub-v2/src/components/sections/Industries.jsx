@@ -12,7 +12,7 @@ export default function Industries() {
           title="INDUSTRIES"
           subtitle="Public, private, and civil sectors - solutions tailored to your unique context."
         />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(200px,1fr))', gap: 1, background: 'rgba(0,0,0,0.08)', border: '1px solid rgba(0,0,0,0.08)', borderRadius: 20, overflow: 'hidden' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(200px,1fr))', gap: 2, background: 'rgba(0,0,0,0.08)', border: '1px solid rgba(0,0,0,0.08)', borderRadius: 20, overflow: 'hidden' }}>
           {industries.map((ind, i) => {
             const Icon = getIcon(ind.iconName)
             return (
