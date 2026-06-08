@@ -77,7 +77,7 @@ export default function ProjectsPage() {
       </section>
 
       <CTASection
-        title="Your project\ncould be next."
+        title={"Your project\ncould be next."}
         subtitle="We'd love to hear about what you're building. Let's start a conversation."
         primaryLabel="START A PROJECT"
         primaryHref="/contact"
