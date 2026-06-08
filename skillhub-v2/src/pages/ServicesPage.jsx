@@ -145,7 +145,7 @@ export default function ServicesPage() {
       </div>
 
       <CTASection
-        title="Ready to get\nstarted?"
+        title={"Ready to get\nstarted?"}
         subtitle="Tell us about your project and we'll recommend the right service combination for your goals."
         primaryLabel="BOOK A FREE CALL"
         primaryHref="/contact"
@@ -155,3 +155,4 @@ export default function ServicesPage() {
     </PageLayout>
   )
 }
+
