@@ -8,7 +8,7 @@ export default function Testimonials() {
       <div className="wrap">
         <SectionHeader
           label="CLIENT VOICES"
-          title="WHAT OUR\nCLIENTS SAY"
+          title={"WHAT OUR\nCLIENTS SAY"}
           subtitle="Results that speak louder than promises."
         />
         <div className="grid-2">
